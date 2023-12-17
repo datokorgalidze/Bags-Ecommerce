@@ -1,0 +1,30 @@
+.cart-container{
+    margin-left: auto;
+    cursor: pointer;
+    
+    img{
+        width: 40px;
+    }
+
+    .cart-count{
+        background-color: black;
+        margin-left: -14px;
+        color: white;
+        border-radius: 10px;
+        font-size: 16px;
+        padding:3px 2px;
+    }
+}
+
+@media(min-width: 1024px){
+    .cart-container{
+        .cart-count{
+            padding:6px;
+            margin-left: -10px;
+        }
+    }
+    } 
+    
+
+
+
