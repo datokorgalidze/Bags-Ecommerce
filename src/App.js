@@ -14,7 +14,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <Routes>
+      <HashRouter>
          <Route exact path='/' element = {<HomePage/>}/>
          <Route path='/shop' element = {<Shop/>} />
          <Route path='/sign-up' element = {<SignUp/>} />
@@ -24,7 +24,7 @@ function App() {
          <Route path='/checkout' element = {<Checkout/>}/>
          <Route path='/success' element = {<Success/>} />
          <Route path='*' element = {<NotFound/>} />
-      </Routes>
+      </HashRouter>
     </div>
   );
 }
