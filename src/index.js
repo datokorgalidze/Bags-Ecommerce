@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter,BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -14,7 +14,7 @@ const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
 
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
-      <HashRouter>
+      <BrowserRouter>
         <ProductsContextProvider>
           <CartContextProvider>
             <Elements stripe={stripePromise}>
@@ -24,7 +24,7 @@ const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
             </Elements>
           </CartContextProvider>
         </ProductsContextProvider>
-      </HashRouter>  
+      </BrowserRouter>  
   );
 
   reportWebVitals();
