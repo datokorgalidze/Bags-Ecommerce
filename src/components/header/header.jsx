@@ -15,7 +15,6 @@ const Header = () =>{
   const { clearCart } = useContext(CartContext);
   const navigate = useNavigate()
   const active = window.location.hash;
-  console.log(active) 
   const handleSignOut = async () => {
   
     try {
