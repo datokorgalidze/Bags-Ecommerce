@@ -4,6 +4,9 @@ import { Formik } from "formik";
 import { auth, createUserProfileDocument } from "../../firebase";
 import {  createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import "./sign-up.scss";
 
 const validate = values => {
@@ -34,6 +37,7 @@ const SignUp = () => {
         try{
            const { user } = await createUserWithEmailAndPassword( auth,email, password)
            await createUserProfileDocument(user, {displayName:firstname})
+           toast.success("You have successfully registered")
            navigate('/shop')
            setSubmitting(false)
         }catch(error){

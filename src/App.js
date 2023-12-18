@@ -9,11 +9,15 @@ import SignIn from './components/sign-in/sign-in';
 import Checkout from './components/checkout/checkout';
 import Success from './components/checkout/stripe-checkout/success';
 import NotFound from './components/not-found';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
+       <ToastContainer position="top-center"/>
       <Routes>
          <Route exact path='/' element = {<HomePage/>}/>
          <Route path='/shop' element = {<Shop/>} />

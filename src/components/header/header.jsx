@@ -5,13 +5,22 @@ import { auth } from '../../firebase';
 import { UserContext } from '../../context/user-context';
 import { CartContext } from '../../context/cart-context';
 import './header.scss';
+import { toast } from "react-toastify";
+
+
+import { useNavigate } from "react-router-dom";
 
 
 const Header = () =>{
   const { clearCart } = useContext(CartContext);
+  const navigate = useNavigate()
+  const active = window.location.hash;
+  console.log(active) 
   const handleSignOut = async () => {
+  
     try {
-    
+      toast.success("You are Sing out")
+      navigate("/")
       await auth.signOut();
 
       clearCart();
@@ -23,19 +32,30 @@ const Header = () =>{
     return(
         <nav className="nav-menu container">
             <div className="logo">
-                <Link to='/'>NOMAD</Link>
+                <Link   
+                to='/'
+                >NOMAD
+                </Link>
             </div>
            <ul>
              <li>
-              <Link to='/'>HOME</Link>
+              <Link className={`nav-link ${active === "#/" && "active"}`}
+              to='/'>
+                HOME
+                </Link>
              </li>
              <li>
-              <Link to='/shop'>SHOP</Link>
+            
+                <Link className={`nav-link ${active === "#/shop" && "active"}`} to='/shop'>
+                    SHOP
+                  </Link>
+
              </li>
              {
           !user && 
           <li>
-            <Link to='/sign-in'>
+            <Link className={`nav-link ${active === "#/sign-in" && "active"}`}
+            to='/sign-in'>
               Sign In
             </Link>
           </li>
@@ -49,7 +69,8 @@ const Header = () =>{
         {
           !user && 
           <li>
-            <Link to='/sign-up'>
+            <Link className={`nav-link ${active === "#/sign-up" && "active"}`}
+             to='/sign-up'>
               Sign Up
             </Link>
           </li>

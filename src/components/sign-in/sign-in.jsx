@@ -5,6 +5,8 @@ import { auth } from "../../firebase";
 import { signInWithEmailAndPassword} from "firebase/auth";
 import  { useState } from 'react';
 import { Formik } from "formik";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "../sign-up/sign-up.scss";
 
 
@@ -36,12 +38,14 @@ const handleSubmit = async (values, { setSubmitting }) => {
       //signin with firebase
       await signInWithEmailAndPassword(auth, email, password);
       setSubmitting(false);
+      toast.success("You are Sign in")
       navigate('/shop');
     } catch (error) {
       console.log('error', error);
       setSubmitting(false);
       if (error.code === 'auth/invalid-login-credentials') {
         setError('Invalid email or password');
+        toast.error("Somthing went wrong")
       } else {
         setError(error.message);
       }
