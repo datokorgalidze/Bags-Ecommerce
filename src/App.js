@@ -1,5 +1,5 @@
 import { Route } from 'react-router-dom';
-import { HashRouter, Routes } from 'react-router-dom';
+import {  Routes } from 'react-router-dom';
 import HomePage from './components/home-page';
 import Shop from './components/pages/shop';
 import SinglePrduct from './components/single-product/single-product';
@@ -14,7 +14,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <HashRouter>
+      <Routes>
          <Route exact path='/' element = {<HomePage/>}/>
          <Route path='/shop' element = {<Shop/>} />
          <Route path='/sign-up' element = {<SignUp/>} />
@@ -24,7 +24,7 @@ function App() {
          <Route path='/checkout' element = {<Checkout/>}/>
          <Route path='/success' element = {<Success/>} />
          <Route path='*' element = {<NotFound/>} />
-      </HashRouter>
+      </Routes>
     </div>
   );
 }
