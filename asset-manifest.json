@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Bags-Ecommerce/static/css/main.274dcbc3.css",
-    "main.js": "/Bags-Ecommerce/static/js/main.9a871c06.js",
+    "main.css": "/Bags-Ecommerce/static/css/main.741f006f.css",
+    "main.js": "/Bags-Ecommerce/static/js/main.b4fe653a.js",
     "static/js/787.723be057.chunk.js": "/Bags-Ecommerce/static/js/787.723be057.chunk.js",
     "static/media/ben-white-unsplash.jpg": "/Bags-Ecommerce/static/media/ben-white-unsplash.4d742d9dfa39bdea943a.jpg",
     "static/media/studio-bag.png": "/Bags-Ecommerce/static/media/studio-bag.0f3196edd8f96de6d41c.png",
     "index.html": "/Bags-Ecommerce/index.html",
-    "main.274dcbc3.css.map": "/Bags-Ecommerce/static/css/main.274dcbc3.css.map",
-    "main.9a871c06.js.map": "/Bags-Ecommerce/static/js/main.9a871c06.js.map",
+    "main.741f006f.css.map": "/Bags-Ecommerce/static/css/main.741f006f.css.map",
+    "main.b4fe653a.js.map": "/Bags-Ecommerce/static/js/main.b4fe653a.js.map",
     "787.723be057.chunk.js.map": "/Bags-Ecommerce/static/js/787.723be057.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.274dcbc3.css",
-    "static/js/main.9a871c06.js"
+    "static/css/main.741f006f.css",
+    "static/js/main.b4fe653a.js"
   ]
 }
